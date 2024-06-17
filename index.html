@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        var linebreak="<br/>";
+        var x=10;
+        document.writeln("hello world\n" +linebreak); 
+        document.writeln(typeof x);
+        document.writeln(x);
+        
+        function sayhello(){
+            alert("hello lasini");
+        }
+        document.writeln(typeof sayhello);
+
+        function sayhello2(){
+            document.writeln("hello world from function2" +linebreak); 
+        }
+
+        var y=0;
+        while(y<=10){
+            document.write(y);
+            y++;
+        }
+        document.writeln(linebreak); 
+
+        var z=10;
+        do{
+            document.write(z);
+            z--
+        }while(z>=0);
+
+        function myname(name,age){
+            document.writeln("name and age is " +name+" " +age); 
+        }
+        function clicked(){
+            document.writeln("button clicked "); 
+        }
+        function getconfirmation(){
+            var x=confirm("do u wanna confirm?");
+            if(x==true){
+                document.writeln("user wanna confirm");
+                return true;
+            }else{
+                document.writeln("user do not wanna confirm");
+                return false;
+            }
+        }
+
+        function getvalue(){
+            var x=prompt("enter name: ","your name here");
+            document.writeln("your name is: "+x);
+        }
+        
+
+        
+    </script>
+
+    <input type="button" onclick="sayhello()" value="hello button"> <br>
+    <input type="button" onclick="sayhello2()" value="hello button2"> <br> <br>
+    <input type="button" onclick="myname('lasini', 22)" value="name button"> <br>
+
+    <input type="button" onclick="clicked()" value="new button 1">
+    <input type="button" onclick="clicked()" value="new button 2">
+    <br><br>
+
+    <input type="button" onclick="getconfirmation()" value="work">
+    <input type="button" onclick="getvalue()" value="work2">
+    
+</body>
+</html>
